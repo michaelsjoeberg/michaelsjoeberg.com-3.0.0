@@ -4,7 +4,6 @@
 *.keep
 BACKUP_*
 config/master.key
-*.log
 *OLD*
 README_PRIVATE.md
 
