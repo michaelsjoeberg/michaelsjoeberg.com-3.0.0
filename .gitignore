@@ -1,0 +1,10 @@
+.bundle/config
+.DS_Store
+.ruby-version
+*.keep
+BACKUP_*
+config/master.key
+*.log
+*OLD*
+README_PRIVATE.md
+tmp/*

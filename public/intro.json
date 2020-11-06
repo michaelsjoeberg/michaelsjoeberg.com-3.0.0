@@ -1,0 +1,20 @@
+{
+    "intro":  [
+    	"python programming",
+    	"functional programming",
+    	"investing in technology",
+    	"software development",
+    	"machine learning",
+        "artificial intelligence"
+    ],
+    "recent": {
+    	"20201104": {
+    		"title": "Genetic Algorithm Optimization in Python",
+    		"url": "/programming/python/other/genetic-algorithm-optimization"
+    	},
+    	"20201102": {
+    		"title": "Basics and Other in C++",
+    		"url": "/programming#c++"
+    	}
+    }
+}

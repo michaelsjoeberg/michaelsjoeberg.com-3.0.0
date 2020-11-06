@@ -1,0 +1,58 @@
+<%= render 'header' %> 
+<%= render 'navigation' %> 
+
+<div class="container-fluid p-md-5 p-sm-3">
+    <div class="row justify-content-end">
+
+        <!-- render post -->
+        <div class="col-12 col-lg-8 col-md-offset-2">
+            <!-- post -->
+            <div class="row">
+                <!-- title -->
+                <div class="col-12">
+                    <h1 class="font-family-serif font-weight-bold">
+                        <a href="/<%= @route_path %>/<%= @date %>"><%= @title %></a>
+                    </h1>
+                    <!-- date -->
+                    <p class="text-muted mb-0"><%= Date.parse(@date).strftime("%B %d, %Y") %></p>
+                </div>
+                <div class="col-12">
+                    <div class="divider"></div>
+                </div>
+                <!-- body -->
+                <div class="col-12 font-family-serif">
+                    <% @lines.drop(3).each do |line| %>
+                        <%= CommonMarker.render_html(line).html_safe %>
+                    <% end %>
+                </div>
+                <div class="col-12">
+                    <div class="divider mt-0"></div>
+                </div>
+            </div>
+            <!-- browse all -->
+            <div class="row">
+                <div class="col-12 text-md-center">
+                    <p class="m-0"><a href="/writing">Browse all</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- recent -->
+        <div class="col-12 col-lg-2 mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <p class="font-weight-bold">Recent updates:</p>
+                </div>
+                <% @recent.keys.each do |date| %>
+                    <div class="col-6 col-lg-12 mb-3">
+                        <p class="small text-muted mb-0"><%= Date.parse(date).strftime("%B %d, %Y") %></p>
+                        <a href="<%= @recent[date]["url"] %>"><%= @recent[date]["title"] %></a>
+                    </div>
+                <% end %>
+            </div>
+        </div><!-- ./recent -->
+
+    </div>
+</div>
+
+<%= render 'footer' %> 

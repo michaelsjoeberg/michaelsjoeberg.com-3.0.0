@@ -1,0 +1,25 @@
+<div class="container-fluid p-md-5 p-sm-3 background--dark">
+    <div class="row justify-content-center">
+        <!-- image -->
+        <div class="col-12 text-center">
+            <h3><%= image_tag "profile_sm.jpg", :class => "m-0", :style => "border-radius:50%;max-height:80px;" %></h3>
+        </div>
+        <!-- location -->
+        <div class="col-12 text-center mt-3">
+            <% if @location.nil? %>
+                <p class="mb-0"><i class="fas fa-map-marker-alt"></i> No location</p>
+            <% else %>
+                <p class="mb-0"><a href="https://www.google.com/maps?q=<%= @location %>" target="_blank"><i class="fas fa-map-marker-alt"></i> <%= @location %></a></p>
+            <% end %>
+        </div>
+
+        <!-- description -->
+        <div class="col-12 col-md-8 text-center mt-3 mt-md-5">
+            <!-- typewriter -->
+            <h1 class="typewriter font-family-mono mt-md-1">
+                <span class="typewriter-text" style="animation: typing 10s steps(<%= @steps %>, end) infinite, blink .75s step-end infinite;"><%= @typewriter %></span>
+            </h1>
+        </div>
+
+    </div>
+</div>
