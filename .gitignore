@@ -1,9 +1,5 @@
-.bundle/config
 .DS_Store
-.ruby-version
-*.keep
 BACKUP_*
-config/master.key
 *OLD*
 README_PRIVATE.md
 
