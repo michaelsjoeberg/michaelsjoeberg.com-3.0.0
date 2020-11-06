@@ -10,6 +10,10 @@
     	"20201102": {
     		"title": "Basics and Other in C++",
     		"url": "/programming#c++"
-    	}
+    	},
+        "20201024": {
+            "title": "Special Pythagorean Triplet in Python",
+            "url": "/programming/python/project-euler-problems/special-pythagorean-triplet"
+        }
     }
 }
