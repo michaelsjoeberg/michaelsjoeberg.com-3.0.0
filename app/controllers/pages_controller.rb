@@ -10,8 +10,9 @@ class PagesController < ApplicationController
         @meta_title = "Michael Sjöberg"
         # intro
         @intro = JSON.parse(File.read(Rails.public_path + 'intro.json'))
-        @typewriter = @intro['intro'].sample
-        @steps = @typewriter.length
+        #@typewriter = @intro['intro'].sample
+        @typewriter = @intro['intro']
+        #@steps = @typewriter.length
         # recent
         @recent = @intro['recent']
         # post
