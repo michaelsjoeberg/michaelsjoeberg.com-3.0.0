@@ -14,7 +14,13 @@
                         <a href="/<%= @route_path %>/<%= @date %>"><%= @title %></a>
                     </h1>
                     <!-- date -->
-                    <p class="text-muted mb-0"><%= Date.parse(@date).strftime("%B %d, %Y") %></p>
+                    <!-- <p class="text-muted mb-0"><%= Date.parse(@date).strftime("%B %d, %Y") %></p> -->
+                    <p class="m-0">
+                    <% @tags.each do |tag| %>
+                        <span><%= tag %><% unless tag.equal?(@tags.last) %> / <% end %></span>
+                    <% end %>
+                    <span class="text-muted float-right"><%= Date.parse(@date).strftime("%B %d, %Y") %></span>
+                    </p>
                 </div>
                 <div class="col-12">
                     <div class="divider"></div>
@@ -64,33 +70,37 @@
         
         <!-- render posts -->
         <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
+            <div class="col-12 col-lg-10">
                 <div class="row list">
                     
                     <% @posts_array.keys.each do |post| %>
-                    <!-- header -->
-                    <% if post.equal?(@posts_array.first) %>
-                    <% @header = Date.parse(post).strftime("%Y") %>
-                    <li class="col-12 mb-3 list_header" style="background:rgba(23, 23, 23, 0.05);">
-                        <p class="my-2"><%= @header %></p>
-                    </li>
-                    <% end %>
                     <!-- list -->
                     <li class="col-12 mb-3">
                         <div class="row">
-                            <div class="col-12">
+                            <!-- <div class="col-12">
                                 <p class="small text-muted mb-0"><%= Date.parse(post).strftime("%B %d, %Y") %></p>
-                            </div>
-                            <div class="col-12 col-md-8">
-                                <a href="/<%= @route_path %>/<%= post %>">
-                                    <%= @posts_array[post][:title] %>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-4 text-md-right">
+                            </div> -->
+                            <div class="col-12">
+                                <h2>
+                                    <a href="/<%= @route_path %>/<%= post %>">
+                                        <%= @posts_array[post][:title] %>
+                                    </a>
+                                </h2>
+                                <p class="m-0">
                                 <% @posts_array[post][:tags].each do |tag| %>
-                                <span class="small text-uppercase font-weight-bold"><%= tag %></span>
+                                    <span><%= tag %><% unless tag.equal?(@posts_array[post][:tags].last) %> / <% end %></span>
                                 <% end %>
+                                <span class="text-muted float-right"><%= Date.parse(post).strftime("%B %d, %Y") %></span>
+                                </p>
                             </div>
+                            <!-- <div class="col-12 col-md-4 text-md-right">
+                                <% @posts_array[post][:tags].each do |tag| %>
+                                <p class="m-0"><%= tag %></p>
+                                <% end %>
+                            </div> -->
+                            <!-- <div class="col-12 col-md-4 text-md-right">
+                                <p class="text-muted mb-0"><%= Date.parse(post).strftime("%B %d, %Y") %></p>
+                            </div> -->
                         </div>
                     </li>
                     <% end %>

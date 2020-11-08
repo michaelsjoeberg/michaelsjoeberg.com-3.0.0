@@ -78,10 +78,10 @@
             <!-- file list -->
             <div class="col-12">
                 <div class="container-fluid">
-                    <div class="row list" style="border:1px solid rgba(23, 23, 23, 0.05);">
+                    <div class="row list" style="border:1px solid rgba(23, 23, 23, 0.1);">
                     <% @programming[category].keys.each do |group| %>
                         <!-- header -->
-                        <li class="list_header col-12 mb-3" style="background:rgba(23, 23, 23, 0.05);">
+                        <li class="list_header col-12 mb-3" style="background:rgba(23, 23, 23, 0.1);">
                             <p id="<%= category %>_<%= group.gsub('-', '_') %>" class="mt-2 mb-2"><%= group.titleize %></p>
                         </li>
                         <% if @programming[category][group]["files"].include? "intro" %>

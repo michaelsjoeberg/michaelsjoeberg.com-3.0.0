@@ -1,11 +1,29 @@
 <%= render 'header' %> 
 <%= render 'navigation' %> 
 
-<div class="container-fluid p-md-5 p-sm-3">
-    <div class="row justify-content-end">
+<div class="container p-md-5 p-sm-3">
+    <div class="row justify-content-center">
+
+        <!-- recent -->
+        <div class="col-12 col-lg-10">
+            <div class="row justify-content-center">
+                <!-- <div class="col-12"><div class="divider"></div></div>
+                <div class="col-12 text-center" style="column-count: 1;">
+                    <p class="font-family-serif font-weight-bold mb-0">Most recent files</p>
+                </div>
+                <div class="col-12"><div class="divider"></div></div> -->
+                <% @recent.keys.each do |date| %>
+                    <div class="col-12 col-lg-3 mb-3">
+                        <p class="small text-muted mb-0"><%= Date.parse(date).strftime("%B %d, %Y") %></p>
+                        <a href="<%= @recent[date]["url"] %>"><%= @recent[date]["title"] %></a>
+                    </div>
+                <% end %>
+                <div class="col-6 col-lg-4"><div class="divider--bold my-5"></div></div>
+            </div>
+        </div><!-- ./recent -->
 
         <!-- render post -->
-        <div class="col-12 col-lg-8 col-md-offset-2">
+        <div class="col-12 col-lg-10">
             <!-- post -->
             <div class="row">
                 <!-- title -->
@@ -14,13 +32,19 @@
                         <a href="/<%= @route_path %>/<%= @date %>"><%= @title %></a>
                     </h1>
                     <!-- date -->
-                    <p class="text-muted mb-0"><%= Date.parse(@date).strftime("%B %d, %Y") %></p>
+                    <!-- <p class="text-muted mb-0"><%= Date.parse(@date).strftime("%B %d, %Y") %></p> -->
+                    <p class="m-0">
+                    <% @tags.each do |tag| %>
+                        <span><%= tag %><% unless tag.equal?(@tags.last) %> / <% end %></span>
+                    <% end %>
+                    <span class="text-muted float-right"><%= Date.parse(@date).strftime("%B %d, %Y") %></span>
+                    </p>
                 </div>
                 <div class="col-12">
-                    <div class="divider"></div>
+                    <div class="divider mb-0"></div>
                 </div>
                 <!-- body -->
-                <div class="col-12 font-family-serif">
+                <div class="col-12 mt-3 font-family-serif">
                     <% @lines.drop(3).each do |line| %>
                         <%= CommonMarker.render_html(line).html_safe %>
                     <% end %>
@@ -38,7 +62,7 @@
         </div>
 
         <!-- recent -->
-        <div class="col-12 col-lg-2 mt-3">
+        <!-- <div class="col-12 col-lg-2 mt-3">
             <div class="row">
                 <div class="col-12">
                     <p class="font-weight-bold">Recent updates:</p>
@@ -50,7 +74,8 @@
                     </div>
                 <% end %>
             </div>
-        </div><!-- ./recent -->
+        </div> -->
+        <!-- ./recent -->
 
     </div>
 </div>

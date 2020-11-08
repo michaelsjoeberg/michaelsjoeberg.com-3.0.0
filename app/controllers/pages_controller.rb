@@ -21,6 +21,7 @@ class PagesController < ApplicationController
         @file = @post + '.md'
         @date = @post
         @title = @posts[@date]['title']
+        @tags = @posts[@date]['tags']
         @lines = File.readlines(Rails.public_path + 'posts/' + @file)
     end
 
@@ -60,6 +61,7 @@ class PagesController < ApplicationController
             @file = @post + '.md'
             @date = @post
             @title = @posts[@date]['title']
+            @tags = @posts[@date]['tags']
             @lines = File.readlines(Rails.public_path + 'posts/' + @file)
             # override meta
             @meta_title = @title

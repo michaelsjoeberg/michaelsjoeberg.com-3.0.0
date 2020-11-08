@@ -92,7 +92,7 @@ hr,
     margin-top              : 1rem;
     margin-bottom           : 1rem;
     border                  : 0;
-    border-top              : 1rem solid $COLOR_DARK_LIGHT;
+    border-top              : 0.25rem solid $COLOR_DARK_LIGHT;
 }
 
 .background--dark { 
@@ -222,21 +222,23 @@ input#search:focus {
 .border-solid:hover a { color: $COLOR_CONTRAST; }
 
 .border-left { 
-    border-left             : 1rem solid $COLOR_DARK_LIGHT !important;
+    border-left             : 0.25rem solid $COLOR_DARK_LIGHT !important;
     background-color        : transparent;
     -webkit-transition      : all .15s;
     -moz-transition         : all .15s; 
     transition              : all .15s;
 
-    &.primary { border-left: 1rem solid $COLOR_PRIMARY !important; }
+    &.primary { border-left: 0.25rem solid $COLOR_PRIMARY !important; }
 }
 
 // NAVBAR 
 // --------------------------------------------------------
 .navbar { 
     font-family             : $FONT_FAMILY_BASE;
-    color                   : $WHITE_BASE;
-    background-color        : $COLOR_DARK_BASE; 
+    // color                   : $WHITE_BASE;
+    // background-color        : $COLOR_DARK_BASE;
+    color                   : $COLOR_DARK_BASE;
+    background-color        : $WHITE_BASE;
 }
 
 .navbar .nav-item { 
@@ -247,7 +249,8 @@ input#search:focus {
     border-bottom           : 0.25rem solid transparent; 
     
     a {
-        color               : $WHITE_BASE;
+        // color               : $WHITE_BASE;
+        color               : $COLOR_DARK_BASE;
         font-family         : $FONT_FAMILY_BASE;
         font-size           : $FONT_SIZE_BASE; 
         text-decoration     : none !important;
@@ -265,14 +268,21 @@ input#search:focus {
     }
 }
 
+.navbar.background--primary .nav-item {
+    a {
+        color               : $WHITE_BASE;
+    }
+}
+
 .navbar .nav-item:hover,
 .navbar .nav-item:focus,
 .navbar .nav-item.show { 
-    border-bottom           : 0.25rem solid $COLOR_PRIMARY;
+    border-bottom               : 0.25rem solid $COLOR_PRIMARY;
 
     a {
-        color               : $WHITE_BASE;
-        text-decoration     : none !important;
+        // color               : $WHITE_BASE;
+        color                   : $COLOR_PRIMARY;
+        text-decoration         : none !important;
     }
 
     .dropdown-menu {
@@ -292,7 +302,13 @@ input#search:focus {
 
 .navbar.background--primary .nav-item:hover,
 .navbar.background--primary .nav-item:focus,
-.navbar.background--primary .nav-item.show { border-bottom: 0.25rem solid $WHITE_BASE; }
+.navbar.background--primary .nav-item.show { 
+    border-bottom           : 0.25rem solid $WHITE_BASE;
+
+    a {
+        color               : $WHITE_BASE;
+    }
+}
 
 /* modal */
 .modal .modal-dialog {
