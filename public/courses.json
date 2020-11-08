@@ -75,7 +75,7 @@
         "description": "Linux fundamentals, virtual machines, and PostgreSQL.",
         "school": "Udacity",
         "url": "https://eu.udacity.com/course/configuring-linux-web-servers--ud299",
-        "ects": "",
+        "ects": null,
         "date": "2018",
         "grade": ""
     },
@@ -123,7 +123,7 @@
         "description": "Introduction to programming with C++.",
         "school": "Microsoft Corporation (edX)",
         "url": "https://www.edx.org/course/introduction-to-c-5",
-        "ects": "",
+        "ects": null,
         "date": "2017",
         "grade": ""
     },
@@ -179,7 +179,7 @@
         "description": "Spreadsheet techniques and best practices (PivotTables, VLOOKUPS, what-if analyses, graphs).",
         "school": "Delft University of Technology (edX)",
         "url": "https://www.edx.org/course/data-analysis-take-it-to-the-max-3",
-        "ects": "",
+        "ects": null,
         "date": "2016",
         "grade": ""
     },
@@ -187,7 +187,7 @@
         "description": "Introduction to data analysis with Python (Numpy, Matplotlib, Pandas).",
         "school": "Microsoft Corporation (edX)",
         "url": "https://www.edx.org/course/introduction-to-python-for-data-science-3",
-        "ects": "",
+        "ects": null,
         "date": "2016",
         "grade": ""
     },
@@ -219,7 +219,7 @@
         "description": "Introduction to programming with  HTML, CSS, and Python.",
         "school": "Udacity",
         "url": "https://eu.udacity.com/course/intro-to-programming-nanodegree--nd000",
-        "ects": "",
+        "ects": null,
         "date": "2015",
         "grade": ""
     },
@@ -227,7 +227,7 @@
         "description": "Web development fundamentals, best practices, and professional problem-solving techniques using Developer Tools.",
         "school": "Udacity",
         "url": "https://www.udacity.com/course/intro-to-html-and-css--ud001",
-        "ects": "",
+        "ects": null,
         "date": "2015",
         "grade": ""
     },
