@@ -1,110 +1,62 @@
 <%= render 'navigation' %>
 
 <div class="container p-md-5 p-sm-3">
-    
     <!-- render post -->
     <% if @post != nil %>
-    <div class="row justify-content-center">
-        <div class="col-12 col-lg-10">
-            <!-- post -->
-            <div class="row">
-                <!-- title -->
-                <div class="col-12">
-                    <h1 class="font-family-serif font-weight-bold">
-                        <a href="/<%= @route_path %>/<%= @date %>"><%= @title %></a>
-                    </h1>
-                    <!-- date -->
-                    <!-- <p class="text-muted mb-0"><%= Date.parse(@date).strftime("%B %d, %Y") %></p> -->
-                    <p class="m-0">
-                    <% @tags.each do |tag| %>
-                        <span><%= tag %><% unless tag.equal?(@tags.last) %> / <% end %></span>
-                    <% end %>
-                    <span class="text-muted float-right"><%= Date.parse(@date).strftime("%B %d, %Y") %></span>
-                    </p>
-                </div>
-                <div class="col-12">
-                    <div class="divider"></div>
-                </div>
-                <!-- body -->
-                <div class="col-12 font-family-serif">
-                    <% @lines.drop(3).each do |line| %>
-                        <%= CommonMarker.render_html(line).html_safe %>
-                    <% end %>
-                </div>
-                <div class="col-12">
-                    <div class="divider mt-0"></div>
-                </div>
-            </div>
-            <!-- browse all -->
-            <div class="row">
-                <div class="col-12 text-md-center">
-                    <p class="m-0"><a href="/writing">Browse all</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+
+        <%= render 'post' %> 
 
     <!-- else render all posts -->
     <% else %>
         <!-- header -->
         <div class="row justify-content-center">
+            <!-- title -->
             <div class="col-12 col-lg-5">
                 <h1><%= @meta_title %></h1>
             </div>
+            <!-- search -->
             <div class="col-12 col-lg-5 text-md-right">
                 <input id="search" class="pl-3" name="search" placeholder="Search" type="text" data-list=".list" autocomplete="off" style="margin-top:9px;min-width:100%;">
             </div>
         </div>
         <!-- summary -->
         <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="divider"></div>
-            </div>
+            <!-- divider -->
+            <div class="col-12 col-md-10"><div class="divider"></div></div>
+            <!-- intro -->
             <div class="col-12 col-md-10" style="column-count: 1;">
                 <p class="font-family-serif mb-0">I sometimes write about various things, mainly as notes on technology, programming, and investing. This is a collection of writings.</p>
             </div>
-            <div class="col-12 col-md-10">
-                <div class="divider"></div>
-            </div>
+            <!-- divider -->
+            <div class="col-12 col-md-10"><div class="divider"></div></div>
         </div>
-        
         <!-- render posts -->
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
                 <div class="row list">
-                    
                     <% @posts_array.keys.each do |post| %>
-                    <!-- list -->
+                    <!-- item -->
                     <li class="col-12 mb-3">
                         <div class="row">
-                            <!-- <div class="col-12">
-                                <p class="small text-muted mb-0"><%= Date.parse(post).strftime("%B %d, %Y") %></p>
-                            </div> -->
                             <div class="col-12">
+                                <!-- post:name -->
                                 <h2>
                                     <a href="/<%= @route_path %>/<%= post %>">
                                         <%= @posts_array[post][:title] %>
                                     </a>
                                 </h2>
+                                <!-- tags -->
                                 <p class="m-0">
                                 <% @posts_array[post][:tags].each do |tag| %>
                                     <span><%= tag %><% unless tag.equal?(@posts_array[post][:tags].last) %> / <% end %></span>
                                 <% end %>
+                                <!-- date -->
                                 <span class="text-muted float-right"><%= Date.parse(post).strftime("%B %d, %Y") %></span>
                                 </p>
                             </div>
-                            <!-- <div class="col-12 col-md-4 text-md-right">
-                                <% @posts_array[post][:tags].each do |tag| %>
-                                <p class="m-0"><%= tag %></p>
-                                <% end %>
-                            </div> -->
-                            <!-- <div class="col-12 col-md-4 text-md-right">
-                                <p class="text-muted mb-0"><%= Date.parse(post).strftime("%B %d, %Y") %></p>
-                            </div> -->
                         </div>
                     </li>
                     <% end %>
-
                 </div>
             </div>
         </div>

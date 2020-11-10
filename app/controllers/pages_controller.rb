@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-    before_action :get_time, :set_meta, :get_twitter, :get_github
+    before_action :get_time, :set_meta, :get_twitter#, :get_github
 
     # version
     $version = "3.0.0"
@@ -10,9 +10,7 @@ class PagesController < ApplicationController
         @meta_title = "Michael Sjöberg"
         # intro
         @intro = JSON.parse(File.read(Rails.public_path + 'intro.json'))
-        #@typewriter = @intro['intro'].sample
         @typewriter = @intro['intro']
-        #@steps = @typewriter.length
         # recent
         @recent = @intro['recent']
         # post
@@ -23,6 +21,14 @@ class PagesController < ApplicationController
         @title = @posts[@date]['title']
         @tags = @posts[@date]['tags']
         @lines = File.readlines(Rails.public_path + 'posts/' + @file)
+        # count words
+        @words = 0
+        @lines.drop(3).each do |line|
+            words = line.split(' ')
+            words.each do |word|
+                @words += 1
+            end
+        end
     end
 
     # GET /programming
@@ -65,6 +71,15 @@ class PagesController < ApplicationController
             @lines = File.readlines(Rails.public_path + 'posts/' + @file)
             # override meta
             @meta_title = @title
+            # count words
+            @words = 0
+            @lines.drop(3).each do |line|
+                words = line.split(' ')
+                words.each do |word|
+                    @words += 1
+                end
+            end
+        # all posts
         else
             @posts_array = Hash.new
             @posts.keys.each do |post|
@@ -100,16 +115,18 @@ class PagesController < ApplicationController
         end
         # meta
         def set_meta
-            @meta_image = "https://www.michaelsjoeberg.com/assets/banner-8618f2bdcf140a0ea70ab3bc83ba382955820a890b81e77fe0069d80b68033ef.jpg"
+            @meta_image = ""
             @meta_site_name = "michaelsjoeberg.com"
             @meta_card_type = "summary"
             @meta_author = "@sjoebergco"
         end
+        
         # github api
-        def get_github
-            url = "https://api.github.com/users/michaelsjoeberg/events/public?client_id=#{ENV['GITHUB_CLIENT_ID']}&client_secret=#{ENV['GITHUB_CLIENT_SECRET']}"
-            @commits = HTTParty.get(url).parsed_response
-        end
+        # def get_github
+        #     url = "https://api.github.com/users/michaelsjoeberg/events/public?client_id=#{ENV['GITHUB_CLIENT_ID']}&client_secret=#{ENV['GITHUB_CLIENT_SECRET']}"
+        #     @commits = HTTParty.get(url).parsed_response
+        # end
+        
         # twitter api
         def get_twitter
             begin

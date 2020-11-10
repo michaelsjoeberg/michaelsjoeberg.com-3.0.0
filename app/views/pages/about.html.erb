@@ -2,17 +2,15 @@
 <%= render 'navigation_about' %>
 
 <div class="container p-md-5 p-sm-3">
-    
     <!-- header -->
     <div class="row justify-content-center">
+        <!-- meta -->
         <div class="col-12 col-lg-10">
             <h1><%= @meta_title %></h1>
         </div>
-        <div class="col-12 col-lg-10">
-            <div class="divider"></div>
-        </div>
+        <!-- divider -->
+        <div class="col-12 col-lg-10"><div class="divider"></div></div>
     </div>
-
     <!-- summary -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-10" style="column-count: 2;">
@@ -26,91 +24,80 @@
             <div class="divider"></div>
         </div>
     </div>
-
     <!-- music -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 text-center" style="column-count: 1;">
             <p class="font-family-serif font-weight-bold mb-0">I spent some time with Ableton Live a while ago.</p>
         </div>
-        <div class="col-12 col-md-10">
-            <div class="divider"></div>
-        </div>
+        <!-- divider -->
+        <div class="col-12 col-md-10"><div class="divider"></div></div>
+        <!-- soundcloud -->
         <div class="col-12 col-md-10">
             <!-- iframe -->
             <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/11389977&color=%230070ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
         </div>
-        <div class="col-12 col-md-10">
-            <div class="divider"></div>
-        </div>
+        <!-- divider -->
+        <div class="col-12 col-md-10"><div class="divider"></div></div>
     </div>
-
     <!-- project intro -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 text-center" style="column-count: 1;">
             <p class="font-family-serif font-weight-bold mb-0">Nowadays: mostly working on projects.</p>
         </div>
-        <div class="col-12 col-md-10">
-            <div class="divider"></div>
-        </div>
+        <!-- divider -->
+        <div class="col-12 col-md-10"><div class="divider"></div></div>
     </div>
-    
     <!-- projects -->
     <% @projects.keys.each do |project| %>
-        <% unless @counter == 4 %>
-
-            <div class="row justify-content-center mb-3">
-                <!-- title -->
-                <div class="col-12 col-md-10 mb-3">
-                    <h2>
-                        <% if @projects[project]['url'] != "" %>
-                        <a href="<%= @projects[project]['url'] %>" target="_blank"><%= project %></a>
-                        <% else %>
-                            <%= project %>
-                        <% end %>
-                    </h2>
+        <div class="row justify-content-center mb-3">
+            <!-- title -->
+            <div class="col-12 col-md-10 mb-3">
+                <h2>
+                    <% if @projects[project]['url'] != "" %>
+                    <a href="<%= @projects[project]['url'] %>" target="_blank"><%= project %></a>
+                    <% else %>
+                        <%= project %>
+                    <% end %>
+                </h2>
+                <!-- meta -->
+                <% if @projects[project]['roles'] != [] %>
+                <p class="m-0">
                     <!-- roles -->
-                    <% if @projects[project]['roles'] != [] %>
-                    <p class="m-0">
-                        <% @projects[project]['roles'].each do |role| %>
-                            <span><%= role.capitalize %><% unless role.equal?(@projects[project]["roles"].last) %> / <% end %></span>
-                        <% end %>
-                        <span class="text-muted float-right"><%= @projects[project]['date'].gsub('-', '-') %></span>
-                    </p>
+                    <% @projects[project]['roles'].each do |role| %>
+                        <span><%= role.capitalize %><% unless role.equal?(@projects[project]["roles"].last) %> / <% end %></span>
                     <% end %>
                     <!-- date -->
-                    <!-- <p class="font-weight-bold text-muted"><%= @projects[project]['date'].gsub('-', '-') %></p> -->
-                </div>
-                <!-- body -->
-                <% if @projects[project]['description'] != [] %>
-                <div class="col-12 col-md-10 mb-3">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12 border-left">
-                                <!-- description -->
-                                <% @projects[project]['description'].each do |paragraph| %>
-                                    <p class="<% unless paragraph.equal?(@projects[project]['description'].last) %>mb-3<% else %>m-0<% end %> font-family-serif"><%= paragraph %></p>
-                                <% end %>
-                            </div>
+                    <span class="text-muted float-right"><%= @projects[project]['date'].gsub('-', '-') %></span>
+                </p>
+                <% end %>
+            </div>
+            <!-- body -->
+            <% if @projects[project]['description'] != [] %>
+            <div class="col-12 col-md-10 mb-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 border-left">
+                            <!-- description -->
+                            <% @projects[project]['description'].each do |paragraph| %>
+                                <p class="<% unless paragraph.equal?(@projects[project]['description'].last) %>mb-3<% else %>m-0<% end %> font-family-serif"><%= paragraph %></p>
+                            <% end %>
                         </div>
                     </div>
                 </div>
-                <% end %>
             </div>
-        <% end %>
+            <% end %>
+        </div>
     <% end %>
-
     <!-- divider -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-10">
             <div class="divider mt-0"></div>
         </div>
     </div>
-
     <!-- download cv -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 text-md-center">
-            <p class="m-0"><a href="/cv.pdf">Download CV as PDF</a></p>
+            <p class="m-0"><a href="/cv.pdf">Download CV</a></p>
         </div>
     </div>
-
 </div>
