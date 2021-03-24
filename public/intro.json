@@ -3,6 +3,10 @@
     	"michael sjoeberg"
     ],
     "recent": {
+        "20210324": {
+            "title": "Largest Product in Grid in Python",
+            "url": "/programming/python/project-euler-problems/largest-product-in-grid"
+        },
     	"20201104": {
     		"title": "Genetic Algorithm Optimization in Python",
     		"url": "/programming/python/other/genetic-algorithm-optimization"
