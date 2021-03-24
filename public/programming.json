@@ -70,7 +70,8 @@
                 "10001st-prime",
                 "largest-product-in-a-series",
                 "special-pythagorean-triplet",
-                "summation-of-primes"
+                "summation-of-primes",
+                "largest-product-in-grid"
             ]
         },
         "other": {
