@@ -3,7 +3,7 @@
         "description": [
             "Automated DevOps for AI applications."
         ],
-        "date": "",
+        "date": "2021-",
         "url": "http://evert.ai",
         "tags": ["automated reasoning", "internet of things"]
     },
@@ -15,11 +15,19 @@
         "url": "",
         "tags": ["finance", "python", "vue.js"]
     },
+    "Holans (Holans Sweden Trading Partnership)": {
+        "description": [
+            "Nutrition supplement product (for sale in Sweden and Norway)"
+        ],
+        "date": "2014-",
+        "url": "https://www.holans.com/",
+        "tags": ["nutrition supplement", "fitness", "retail"]
+    },
     "EQZEN": {
         "description": [
             "Web-based stock portfolio tracker."
         ],
-        "date": "2018-",
+        "date": "2018-2020",
         "url": "https://eqzen.com",
         "tags": ["finance", "Python"]
     },
@@ -30,14 +38,6 @@
         "date": "2018",
         "url": "https://learnhub.io",
         "tags": ["self-learning", "platform", "python"]
-    },
-    "Holans (Holans Sweden Trading Partnership)": {
-        "description": [
-            "Nutrition supplement product (for sale in Sweden and Norway)"
-        ],
-        "date": "2014-",
-        "url": "https://www.holans.com/",
-        "tags": ["nutrition supplement", "fitness", "retail"]
     },
     "Give Trees (Plant for Earth LTD)": {
         "description": [
