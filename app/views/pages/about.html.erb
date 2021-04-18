@@ -50,8 +50,8 @@
                 <% if @projects[project]['tags'] != [] %>
                 <p class="m-0">
                     <!-- tags -->
-                    <% @projects[project]['tags'].each do |role| %>
-                        <span><%= role.capitalize %><% unless role.equal?(@projects[project]["tags"].last) %> / <% end %></span>
+                    <% @projects[project]['tags'].each do |tag| %>
+                        <span><%= tag.capitalize %><% unless tag.equal?(@projects[project]["tags"].last) %> / <% end %></span>
                     <% end %>
                     <!-- date -->
                     <span class="text-muted float-right"><%= @projects[project]['date'].gsub('-', '-') %></span>
