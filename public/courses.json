@@ -1,6 +1,6 @@
 {   
     "Introduction to corporate finance": {
-        "description": "Financial statements and ratio analysis, forecasting and planning, estimating risk and return, portfolio theory, capital structure and WACC, dividend policy, raising finance.",
+        "description": "Financial statements and ratio analysis, financial forecasting and planning, estimating risk and return, efficient-market hypothesis (EMH), capital structure and cost of capital (WACC), dividend policy, raising finance.",
         "school": "The Open University Business School, PG",
         "url": "http://www.openuniversity.edu/courses/postgraduate/modules/b858",
         "ects": "30",
@@ -8,7 +8,7 @@
         "grade": null
     },
     "Research methods for finance": {
-        "description": "Methods in finance, time series, probability distributions, linear and multiple regression, binary regression models.",
+        "description": "Research methods in finance, time series, panel data, probability distributions, linear and multiple regression, binary regression models.",
         "school": "The Open University Business School, PG",
         "url": "http://www.openuniversity.edu/courses/postgraduate/modules/b860",
         "ects": "30",
@@ -48,7 +48,7 @@
         "grade": "Distinction"
     },
     "Security engineering": {
-        "description": "Software security, implementation errors and exploits, static and dynamic analysis, privilege management, access control.",
+        "description": "Low-level programming in C and x86 Assembly, application security, implementation errors and exploits, static and dynamic analysis, privilege management and access control.",
         "school": "King's College London, PG",
         "url": "https://www.kcl.ac.uk/abroad/module-options/module?id=f2607e0d-9506-4b90-947e-f90b569e8f05",
         "ects": "15",
@@ -56,7 +56,7 @@
         "grade": ""
     },
     "Computer vision": {
-        "description": "Image formation foundations (physics, geometry, human visual system), filtering and convolution, feature detection, grouping and segmentation, object categorization and recognition.",
+        "description": "Image formation (physics, geometry, human visual system), filtering and convolution, feature detection, grouping and segmentation, object categorization and recognition, MATLAB.",
         "school": "King's College London, PG",
         "url": "https://www.kcl.ac.uk/study/courses-data/modules/6/Computer-Vision-6CCS3COV",
         "ects": "15",
@@ -72,7 +72,7 @@
         "grade": ""
     },
     "Artificial Intelligence: reasoning and decision making": {
-        "description": "Knowledge representation, probabilistic reasoning, temporal probabilistic reasoning, sequential decision making, game theory, argumentation, machine learning.",
+        "description": "Knowledge representation, probabilistic reasoning (MDP), temporal probabilistic reasoning, sequential decision making, game theory, argumentation, machine learning.",
         "school": "King's College London, PG",
         "url": "https://www.kcl.ac.uk/study/courses-data/modules/6/Artificial-Intelligence-6ccs3ain1",
         "ects": "15",
