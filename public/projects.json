@@ -1,58 +1,58 @@
 {   
-    "Evert.AI (in development)": {
+    "Evert.AI (not in active development)": {
         "description": [
-            "Deployment and hosting platform for knowledge databases (automated reasoning applications)."
+            "Automated DevOps for AI applications."
         ],
         "date": "2020-",
         "url": "http://evert.ai",
         "tags": ["automated reasoning", "internet of things"],
-        "roles": ["automated reasoning", "internet of things"]
+        // "roles": ["automated reasoning", "internet of things"]
     },
-    "Open Terminal (private beta)": {
+    "Stockstack (previously Open Terminal)": {
         "description": [
-            "Desktop-based application for quick access to financial data."
+            "Web- and desktop-based financial data platform with advanced portfolio management tools."
         ],
         "date": "2020-",
         "url": "",
-        "tags": ["finance"],
-        "roles": ["finance"]
+        "tags": ["finance", "electron" "python", "vue.js"],
+        // "roles": ["finance"]
     },
     "EQZEN": {
         "description": [
-            "Web-based platform to manage multiple stock portfolios."
+            "Web-based platform and tools for portfolio management."
         ],
         "date": "2018-",
         "url": "https://eqzen.com",
-        "tags": ["productivity", "finance"],
-        "roles": ["productivity", "finance"]
+        "tags": ["finance", "Python"],
+        // "roles": ["productivity", "finance"]
     },
-    "LearnHub.io": {
+    "LearnHub": {
         "description": [
             "Web-based platform and skill tracker for self-learners."
         ],
         "date": "2018-",
         "url": "https://learnhub.io",
-        "tags": ["online learning", "personal development"],
-        "roles": ["online learning", "personal development"]
+        "tags": ["self-learning", "platform", "PHP"],
+        // "roles": ["self-learning", "platform"]
     },
-    "Holans": {
+    "Holans (Holans Sweden Trading Partnership)": {
         "description": [
             "Nutrition supplement product (for sale in Sweden and Norway)"
         ],
         "date": "2014-",
-        "url": "http://holans.com",
-        "tags": ["nutrition supplement", "fitness"],
-        "roles": ["nutrition supplement", "fitness"]
+        "url": "https://www.holans.com/",
+        "tags": ["nutrition supplement", "fitness", "retail"],
+        // "roles": ["nutrition supplement", "fitness"]
     },
-    "Give Trees (closed)": {
+    "Give Trees (Plant for Earth LTD)": {
         "description": [
-            "Mobile-based applications and games targeting charitable donations (Android and iOS, both discontinued)."]
+            "Mobile-first application and game targeting charitable donations (Android and iOS, both discontinued)."]
         ,
         "date": "2014-2017",
-        "url": "https://givetrees.co",
-        "tags": ["mobile application", "environment"],
-        "roles": ["mobile application", "environment"]
-    }
+        "url": "https://web.archive.org/web/20190205052959/https://www.givetrees.co/",
+        "tags": ["mobile application", "environment", "PHP", "lua"],
+        // "roles": ["mobile application", "environment"]
+    },
     // "Doolio": {
     //     "description": [
     //         "Doolio was a skill tracker and public database with skills."
