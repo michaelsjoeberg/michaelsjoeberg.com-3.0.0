@@ -1,9 +1,9 @@
 {   
-    "Evert.AI (not in active development)": {
+    "Evert.AI (idea stage)": {
         "description": [
             "Automated DevOps for AI applications."
         ],
-        "date": "2020-",
+        "date": "",
         "url": "http://evert.ai",
         "tags": ["automated reasoning", "internet of things"]
     },
