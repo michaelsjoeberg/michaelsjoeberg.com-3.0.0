@@ -47,11 +47,11 @@
                     <% end %>
                 </h2>
                 <!-- meta -->
-                <% if @projects[project]['roles'] != [] %>
+                <% if @projects[project]['tags'] != [] %>
                 <p class="m-0">
-                    <!-- roles -->
-                    <% @projects[project]['roles'].each do |role| %>
-                        <span><%= role.capitalize %><% unless role.equal?(@projects[project]["roles"].last) %> / <% end %></span>
+                    <!-- tags -->
+                    <% @projects[project]['tags'].each do |role| %>
+                        <span><%= role.capitalize %><% unless role.equal?(@projects[project]["tags"].last) %> / <% end %></span>
                     <% end %>
                     <!-- date -->
                     <span class="text-muted float-right"><%= @projects[project]['date'].gsub('-', '-') %></span>
