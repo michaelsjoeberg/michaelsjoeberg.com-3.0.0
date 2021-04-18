@@ -6,7 +6,6 @@
         "date": "2020-",
         "url": "http://evert.ai",
         "tags": ["automated reasoning", "internet of things"]
-        // "roles": ["automated reasoning", "internet of things"]
     },
     "Stockstack (previously Open Terminal)": {
         "description": [
@@ -15,7 +14,6 @@
         "date": "2020-",
         "url": "",
         "tags": ["finance", "electron" "python", "vue.js"]
-        // "roles": ["finance"]
     },
     "EQZEN": {
         "description": [
@@ -24,7 +22,6 @@
         "date": "2018-",
         "url": "https://eqzen.com",
         "tags": ["finance", "Python"]
-        // "roles": ["productivity", "finance"]
     },
     "LearnHub": {
         "description": [
@@ -33,7 +30,6 @@
         "date": "2018-",
         "url": "https://learnhub.io",
         "tags": ["self-learning", "platform", "Python"]
-        // "roles": ["self-learning", "platform"]
     },
     "Holans (Holans Sweden Trading Partnership)": {
         "description": [
@@ -42,7 +38,6 @@
         "date": "2014-",
         "url": "https://www.holans.com/",
         "tags": ["nutrition supplement", "fitness", "retail"]
-        // "roles": ["nutrition supplement", "fitness"]
     },
     "Give Trees (Plant for Earth LTD)": {
         "description": [
@@ -51,29 +46,5 @@
         "date": "2014-2017",
         "url": "https://web.archive.org/web/20190205052959/https://www.givetrees.co/",
         "tags": ["mobile application", "environment", "PHP", "lua"]
-        // "roles": ["mobile application", "environment"]
     }
-    // "Doolio": {
-    //     "description": [
-    //         "Doolio was a skill tracker and public database with skills."
-    //     ],
-    //     "date": "",
-    //     "url": "https://doolio.co",
-    //     "tags": ["productivity", "community"],
-    //     "roles": []
-    // },
-    // "A Python Primer and Cheat Sheet": {
-    //     "description": [],
-    //     "date": "",
-    //     "url": "https://michaelsjoeberg.github.io/A-Python-Primer-and-Cheat-Sheet/",
-    //     "tags": [],
-    //     "roles": []
-    // },
-    // "A Scala Primer and Cheat Sheet": {
-    //     "description": [],
-    //     "date": "",
-    //     "url": "https://michaelsjoeberg.github.io/A-Scala-Primer-and-Cheat-Sheet/",
-    //     "tags": [],
-    //     "roles": []
-    // }
 }
