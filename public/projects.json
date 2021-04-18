@@ -5,7 +5,7 @@
         ],
         "date": "2020-",
         "url": "http://evert.ai",
-        "tags": ["automated reasoning", "internet of things"],
+        "tags": ["automated reasoning", "internet of things"]
         // "roles": ["automated reasoning", "internet of things"]
     },
     "Stockstack (previously Open Terminal)": {
@@ -14,7 +14,7 @@
         ],
         "date": "2020-",
         "url": "",
-        "tags": ["finance", "electron" "python", "vue.js"],
+        "tags": ["finance", "electron" "python", "vue.js"]
         // "roles": ["finance"]
     },
     "EQZEN": {
@@ -23,7 +23,7 @@
         ],
         "date": "2018-",
         "url": "https://eqzen.com",
-        "tags": ["finance", "Python"],
+        "tags": ["finance", "Python"]
         // "roles": ["productivity", "finance"]
     },
     "LearnHub": {
@@ -32,7 +32,7 @@
         ],
         "date": "2018-",
         "url": "https://learnhub.io",
-        "tags": ["self-learning", "platform", "PHP"],
+        "tags": ["self-learning", "platform", "Python"]
         // "roles": ["self-learning", "platform"]
     },
     "Holans (Holans Sweden Trading Partnership)": {
@@ -41,7 +41,7 @@
         ],
         "date": "2014-",
         "url": "https://www.holans.com/",
-        "tags": ["nutrition supplement", "fitness", "retail"],
+        "tags": ["nutrition supplement", "fitness", "retail"]
         // "roles": ["nutrition supplement", "fitness"]
     },
     "Give Trees (Plant for Earth LTD)": {
@@ -50,9 +50,9 @@
         ,
         "date": "2014-2017",
         "url": "https://web.archive.org/web/20190205052959/https://www.givetrees.co/",
-        "tags": ["mobile application", "environment", "PHP", "lua"],
+        "tags": ["mobile application", "environment", "PHP", "lua"]
         // "roles": ["mobile application", "environment"]
-    },
+    }
     // "Doolio": {
     //     "description": [
     //         "Doolio was a skill tracker and public database with skills."
