@@ -13,7 +13,7 @@
         ],
         "date": "2020-",
         "url": "",
-        "tags": ["finance", "electron", "python", "vue.js"]
+        "tags": ["finance", "python", "vue.js"]
     },
     "EQZEN": {
         "description": [
@@ -45,6 +45,6 @@
         ,
         "date": "2014-2017",
         "url": "https://web.archive.org/web/20190205052959/https://www.givetrees.co/",
-        "tags": ["mobile application", "environment", "PHP", "lua"]
+        "tags": ["mobile application", "PHP", "lua"]
     }
 }
