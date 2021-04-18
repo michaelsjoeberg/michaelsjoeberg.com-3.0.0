@@ -7,9 +7,9 @@
         "url": "http://evert.ai",
         "tags": ["automated reasoning", "internet of things"]
     },
-    "Stockstack (previously Open Terminal)": {
+    "Stockstack (in development; previously Open Terminal)": {
         "description": [
-            "Web- and desktop-based financial data platform with advanced portfolio management tools."
+            "Web/desktop-based financial data platform with advanced portfolio management tools."
         ],
         "date": "2020-",
         "url": "",
@@ -17,7 +17,7 @@
     },
     "EQZEN": {
         "description": [
-            "Web-based platform and tools for portfolio management."
+            "Web-based stock portfolio tracker."
         ],
         "date": "2018-",
         "url": "https://eqzen.com",
