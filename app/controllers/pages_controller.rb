@@ -21,9 +21,10 @@ class PagesController < ApplicationController
         @title = @posts[@date]['title']
         @tags = @posts[@date]['tags']
         @lines = File.readlines(Rails.public_path + 'posts/' + @file)
+        @updated = @lines[3]
         # count words
         @words = 0
-        @lines.drop(3).each do |line|
+        @lines.drop(4).each do |line|
             words = line.split(' ')
             words.each do |word|
                 @words += 1
@@ -69,11 +70,12 @@ class PagesController < ApplicationController
             @title = @posts[@date]['title']
             @tags = @posts[@date]['tags']
             @lines = File.readlines(Rails.public_path + 'posts/' + @file)
+            @updated = @lines[3]
             # override meta
             @meta_title = @title
             # count words
             @words = 0
-            @lines.drop(3).each do |line|
+            @lines.drop(4).each do |line|
                 words = line.split(' ')
                 words.each do |word|
                     @words += 1
