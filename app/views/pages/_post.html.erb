@@ -9,9 +9,9 @@
             <!-- meta -->
             <p class="text-muted m-0">
                 <!-- date -->
-                <span><%= Date.parse(@date).strftime("%B %d, %Y") %></span>
+                <span><%= Date.parse(@date).strftime("%b %d, %Y") %> (updated: <%= Date.parse(@updated).strftime("%b %d, %Y") %>)</span>
                 <!-- words -->
-                <span>&#9642; <%= @words / 250 %> min read</span>
+                <span>&#9642; <%= @words / 75 %> min read</span>
                 <!-- tags -->
                 <span class="float-right">
                     <% @tags.each do |tag| %>
@@ -24,7 +24,7 @@
         <div class="col-12"><div class="divider mb-0"></div></div>
         <!-- body -->
         <div class="col-12 mt-3 font-family-serif">
-            <% @lines.drop(3).each do |line| %>
+            <% @lines.drop(4).each do |line| %>
                 <%= CommonMarker.render_html(line).html_safe %>
             <% end %>
         </div>
