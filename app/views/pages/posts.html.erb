@@ -51,7 +51,7 @@
                                     <span><%= tag %><% unless tag.equal?(@posts_array[post][:tags].last) %> / <% end %></span>
                                 <% end %>
                                 <!-- date -->
-                                <span class="text-muted float-right"><%= Date.parse(post).strftime("%B %d, %Y") %></span>
+                                <span class="text-muted float-right"><%= Date.parse(post).strftime("%b %d, %Y") %></span>
                                 </p>
                             </div>
                         </div>
