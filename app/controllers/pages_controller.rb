@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 
     # GET /
     def home
-        @route_path = "writing"
+        @route_path = "posts"
         @meta_title = "Michael Sjöberg"
         # intro
         @intro = JSON.parse(File.read(Rails.public_path + 'intro.json'))
@@ -14,7 +14,7 @@ class PagesController < ApplicationController
         # recent
         @recent = @intro['recent']
         # post
-        @posts = JSON.parse(File.read(Rails.public_path + 'writing.json'))
+        @posts = JSON.parse(File.read(Rails.public_path + 'posts.json'))
         @post = @posts.keys.first
         @file = @post + '.md'
         @date = @post
@@ -56,13 +56,13 @@ class PagesController < ApplicationController
         end
     end
 
-    # GET /writing
-    def writing
-        @route_path = "writing"
-        @meta_title = "Writing"
+    # GET /posts
+    def posts
+        @route_path = "posts"
+        @meta_title = "Posts"
         @post = params[:post]
         # post
-        @posts = JSON.parse(File.read(Rails.public_path + 'writing.json'))
+        @posts = JSON.parse(File.read(Rails.public_path + 'posts.json'))
         unless (@post.nil?)
             @file = @post + '.md'
             @date = @post
