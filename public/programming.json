@@ -234,5 +234,16 @@
                 "trace"
             ]
         }
-    }
+    },
+    "pascal": {
+        "basics": {
+            "path": "https://raw.githubusercontent.com/michaelsjoeberg/programming/master/pascal/",
+            "url": "https://github.com/michaelsjoeberg/programming/blob/master/pascal/",
+            "format": ".pas",
+            "files": [
+                "intro",
+                "arithmetics"
+            ]
+        }
+    },
 }
