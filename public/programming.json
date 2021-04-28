@@ -242,7 +242,8 @@
             "format": ".pas",
             "files": [
                 "intro",
-                "arithmetics"
+                "arithmetics",
+                "variables"
             ]
         }
     }
