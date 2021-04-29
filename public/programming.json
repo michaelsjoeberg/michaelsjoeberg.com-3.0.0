@@ -243,6 +243,9 @@
             "files": [
                 "intro",
                 "arithmetics",
+                "arrays",
+                "constants",
+                "logical-operators",
                 "variables"
             ]
         }
