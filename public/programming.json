@@ -246,7 +246,9 @@
                 "variables",
                 "constants",
                 "logical-operators",
-                "arrays"
+                "arrays",
+                "records",
+                "sets"
             ]
         }
     }
