@@ -243,10 +243,10 @@
             "files": [
                 "intro",
                 "arithmetics",
-                "arrays",
+                "variables",
                 "constants",
                 "logical-operators",
-                "variables"
+                "arrays"
             ]
         }
     }
