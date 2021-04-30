@@ -22,7 +22,7 @@
                 "files",
                 "exceptions",
                 "date-and-time",
-                "lib-math",
+                "mathematical-operator",
                 "recursion",
                 "regular-expression"
             ]
