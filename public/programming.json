@@ -22,7 +22,7 @@
                 "files",
                 "exceptions",
                 "date-and-time",
-                "mathematical-operator",
+                "mathematical-operators",
                 "recursion",
                 "regular-expression"
             ]
